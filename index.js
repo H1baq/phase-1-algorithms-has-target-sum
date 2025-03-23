@@ -1,7 +1,29 @@
 function hasTargetSum(array, target) {
+  const seenNumbers = {};
+
+  for (const number of array) {
+    // n steps
+    const complement = target - number;
+    if (complement in seenNumbers) return true;
+    seenNumbers[number] = true;
+  }
+
+  return false;
+
   // Write your algorithm here
 }
+function findSock(array) {
+  for (const item of array) {
+    if (item === "sock") return "sock";
+  }
+}
 
+function findSock(object) {
+  if (object.sock) return "sock";
+}
+function findSock(object) {
+  if (object.sock) return "sock";
+}
 /* 
   Write the Big O time complexity of your function here
 */
